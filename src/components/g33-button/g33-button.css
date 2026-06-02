@@ -21,6 +21,18 @@
   border: var(--g33-border-width) solid var(--g33-color-secondary);
 }
 
+.button--ghost {
+  background: transparent;
+  color: var(--g33-color-white);
+  border: var(--g33-border-width) solid var(--g33-color-white);
+  transition: all 0.2s ease;
+}
+
+.button--ghost:hover {
+  background: var(--g33-color-white);
+  color: var(--g33-color-primary);
+}
+
 .button:disabled {
   opacity: 0.5;
   cursor: not-allowed;

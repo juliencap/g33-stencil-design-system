@@ -6,7 +6,7 @@ import { Component, Prop, h } from '@stencil/core';
   shadow: true,
 })
 export class G33Button {
-  @Prop() variant: 'primary' | 'secondary' = 'primary';
+  @Prop() variant: 'primary' | 'secondary' | 'ghost' = 'primary';
   @Prop() size: 'sm' | 'md' | 'lg' = 'md';
   @Prop() disabled: boolean = false;
 

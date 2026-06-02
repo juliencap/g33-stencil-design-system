@@ -49,6 +49,27 @@ export class G33Showcase {
             postUrl="https://www.girondins33.com/Actualites/72512-christophe-dugarry-on-a-un-president-un-actionnaire-qui-est-transparent-il-ny-a-rien-dhumain-dans-ce-club"
           ></g33-article-card>
         </section>
+
+        <section>
+          <h2>Hero simple</h2>
+          <g33-hero-banner titleText="Toute l'actualité des Girondins" imageUrl="https://www.girondins33.com/storage/2024/02/logo-girondins-bordeaux-sc-1-800x445.webp" />
+
+          <h2>Hero avec sous-titre</h2>
+          <g33-hero-banner
+            titleText="Toute l'actualité des Girondins"
+            subtitle="Mercato, analyses et réactions"
+            imageUrl="https://www.girondins33.com/storage/2024/02/logo-girondins-bordeaux-sc-1-800x445.webp"
+          />
+
+          <h2>Hero</h2>
+          <g33-hero-banner
+            titleText="Toute l'actualité des Girondins"
+            subtitle="Mercato, analyses, interviews et réactions autour du club"
+            imageUrl="https://www.girondins33.com/storage/2024/02/logo-girondins-bordeaux-sc-1-800x445.webp"
+            ctaLabel="Voir les articles"
+            ctaUrl="#"
+          />
+        </section>
       </main>
     );
   }

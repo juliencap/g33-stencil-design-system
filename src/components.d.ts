@@ -36,7 +36,14 @@ export namespace Components {
         /**
           * @default 'primary'
          */
-        "variant": 'primary' | 'secondary';
+        "variant": 'primary' | 'secondary' | 'ghost';
+    }
+    interface G33HeroBanner {
+        "ctaLabel"?: string;
+        "ctaUrl"?: string;
+        "imageUrl"?: string;
+        "subtitle"?: string;
+        "titleText": string;
     }
     interface G33Showcase {
     }
@@ -60,6 +67,12 @@ declare global {
         prototype: HTMLG33ButtonElement;
         new (): HTMLG33ButtonElement;
     };
+    interface HTMLG33HeroBannerElement extends Components.G33HeroBanner, HTMLStencilElement {
+    }
+    var HTMLG33HeroBannerElement: {
+        prototype: HTMLG33HeroBannerElement;
+        new (): HTMLG33HeroBannerElement;
+    };
     interface HTMLG33ShowcaseElement extends Components.G33Showcase, HTMLStencilElement {
     }
     var HTMLG33ShowcaseElement: {
@@ -70,6 +83,7 @@ declare global {
         "g33-alert": HTMLG33AlertElement;
         "g33-article-card": HTMLG33ArticleCardElement;
         "g33-button": HTMLG33ButtonElement;
+        "g33-hero-banner": HTMLG33HeroBannerElement;
         "g33-showcase": HTMLG33ShowcaseElement;
     }
 }
@@ -106,7 +120,14 @@ declare namespace LocalJSX {
         /**
           * @default 'primary'
          */
-        "variant"?: 'primary' | 'secondary';
+        "variant"?: 'primary' | 'secondary' | 'ghost';
+    }
+    interface G33HeroBanner {
+        "ctaLabel"?: string;
+        "ctaUrl"?: string;
+        "imageUrl"?: string;
+        "subtitle"?: string;
+        "titleText": string;
     }
     interface G33Showcase {
     }
@@ -124,15 +145,23 @@ declare namespace LocalJSX {
         "postUrl": string;
     }
     interface G33ButtonAttributes {
-        "variant": 'primary' | 'secondary';
+        "variant": 'primary' | 'secondary' | 'ghost';
         "size": 'sm' | 'md' | 'lg';
         "disabled": boolean;
+    }
+    interface G33HeroBannerAttributes {
+        "titleText": string;
+        "subtitle": string;
+        "imageUrl": string;
+        "ctaLabel": string;
+        "ctaUrl": string;
     }
 
     interface IntrinsicElements {
         "g33-alert": Omit<G33Alert, keyof G33AlertAttributes> & { [K in keyof G33Alert & keyof G33AlertAttributes]?: G33Alert[K] } & { [K in keyof G33Alert & keyof G33AlertAttributes as `attr:${K}`]?: G33AlertAttributes[K] } & { [K in keyof G33Alert & keyof G33AlertAttributes as `prop:${K}`]?: G33Alert[K] };
         "g33-article-card": Omit<G33ArticleCard, keyof G33ArticleCardAttributes> & { [K in keyof G33ArticleCard & keyof G33ArticleCardAttributes]?: G33ArticleCard[K] } & { [K in keyof G33ArticleCard & keyof G33ArticleCardAttributes as `attr:${K}`]?: G33ArticleCardAttributes[K] } & { [K in keyof G33ArticleCard & keyof G33ArticleCardAttributes as `prop:${K}`]?: G33ArticleCard[K] } & OneOf<"postTitle", G33ArticleCard["postTitle"], G33ArticleCardAttributes["postTitle"]> & OneOf<"category", G33ArticleCard["category"], G33ArticleCardAttributes["category"]> & OneOf<"imageUrl", G33ArticleCard["imageUrl"], G33ArticleCardAttributes["imageUrl"]> & OneOf<"publishedAt", G33ArticleCard["publishedAt"], G33ArticleCardAttributes["publishedAt"]>;
         "g33-button": Omit<G33Button, keyof G33ButtonAttributes> & { [K in keyof G33Button & keyof G33ButtonAttributes]?: G33Button[K] } & { [K in keyof G33Button & keyof G33ButtonAttributes as `attr:${K}`]?: G33ButtonAttributes[K] } & { [K in keyof G33Button & keyof G33ButtonAttributes as `prop:${K}`]?: G33Button[K] };
+        "g33-hero-banner": Omit<G33HeroBanner, keyof G33HeroBannerAttributes> & { [K in keyof G33HeroBanner & keyof G33HeroBannerAttributes]?: G33HeroBanner[K] } & { [K in keyof G33HeroBanner & keyof G33HeroBannerAttributes as `attr:${K}`]?: G33HeroBannerAttributes[K] } & { [K in keyof G33HeroBanner & keyof G33HeroBannerAttributes as `prop:${K}`]?: G33HeroBanner[K] } & OneOf<"titleText", G33HeroBanner["titleText"], G33HeroBannerAttributes["titleText"]>;
         "g33-showcase": G33Showcase;
     }
 }
@@ -143,6 +172,7 @@ declare module "@stencil/core" {
             "g33-alert": LocalJSX.IntrinsicElements["g33-alert"] & JSXBase.HTMLAttributes<HTMLG33AlertElement>;
             "g33-article-card": LocalJSX.IntrinsicElements["g33-article-card"] & JSXBase.HTMLAttributes<HTMLG33ArticleCardElement>;
             "g33-button": LocalJSX.IntrinsicElements["g33-button"] & JSXBase.HTMLAttributes<HTMLG33ButtonElement>;
+            "g33-hero-banner": LocalJSX.IntrinsicElements["g33-hero-banner"] & JSXBase.HTMLAttributes<HTMLG33HeroBannerElement>;
             "g33-showcase": LocalJSX.IntrinsicElements["g33-showcase"] & JSXBase.HTMLAttributes<HTMLG33ShowcaseElement>;
         }
     }

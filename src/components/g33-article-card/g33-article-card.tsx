@@ -39,13 +39,15 @@ export class G33ArticleCard {
               <time class="entry-date">{this.publishedAt}</time>
             </span>
 
-            <span class="byline">
-              <span class="author vcard">{this.author}</span>
-            </span>
+            {this.author && (
+              <span class="byline">
+                <span class="author vcard">{this.author}</span>
+              </span>
+            )}
           </div>
 
           <div class="entry-content clearfix">
-            <p>{this.excerpt}</p>
+            {this.excerpt && <p>{this.excerpt}</p>}
             <g33-button variant="secondary">Lire la suite</g33-button>
           </div>
         </div>
