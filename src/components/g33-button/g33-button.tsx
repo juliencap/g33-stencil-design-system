@@ -3,6 +3,7 @@ import { Component, Prop, h } from '@stencil/core';
 @Component({
   tag: 'g33-button',
   styleUrl: 'g33-button.css',
+  shadow: true,
 })
 export class G33Button {
   @Prop() variant: 'primary' | 'secondary' = 'primary';

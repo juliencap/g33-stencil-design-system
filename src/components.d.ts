@@ -12,6 +12,18 @@ export namespace Components {
          */
         "type": 'info' | 'success' | 'warning' | 'error';
     }
+    interface G33ArticleCard {
+        "author"?: string;
+        "category": string;
+        "excerpt"?: string;
+        "imageUrl": string;
+        "postTitle": string;
+        /**
+          * @default '#'
+         */
+        "postUrl": string;
+        "publishedAt": string;
+    }
     interface G33Button {
         /**
           * @default false
@@ -36,6 +48,12 @@ declare global {
         prototype: HTMLG33AlertElement;
         new (): HTMLG33AlertElement;
     };
+    interface HTMLG33ArticleCardElement extends Components.G33ArticleCard, HTMLStencilElement {
+    }
+    var HTMLG33ArticleCardElement: {
+        prototype: HTMLG33ArticleCardElement;
+        new (): HTMLG33ArticleCardElement;
+    };
     interface HTMLG33ButtonElement extends Components.G33Button, HTMLStencilElement {
     }
     var HTMLG33ButtonElement: {
@@ -50,16 +68,31 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "g33-alert": HTMLG33AlertElement;
+        "g33-article-card": HTMLG33ArticleCardElement;
         "g33-button": HTMLG33ButtonElement;
         "g33-showcase": HTMLG33ShowcaseElement;
     }
 }
 declare namespace LocalJSX {
+    type OneOf<K extends string, PropT, AttrT = PropT> = { [P in K]: PropT } & { [P in `attr:${K}` | `prop:${K}`]?: never } | { [P in `attr:${K}`]: AttrT } & { [P in K | `prop:${K}`]?: never } | { [P in `prop:${K}`]: PropT } & { [P in K | `attr:${K}`]?: never };
+
     interface G33Alert {
         /**
           * @default 'info'
          */
         "type"?: 'info' | 'success' | 'warning' | 'error';
+    }
+    interface G33ArticleCard {
+        "author"?: string;
+        "category": string;
+        "excerpt"?: string;
+        "imageUrl": string;
+        "postTitle": string;
+        /**
+          * @default '#'
+         */
+        "postUrl"?: string;
+        "publishedAt": string;
     }
     interface G33Button {
         /**
@@ -81,6 +114,15 @@ declare namespace LocalJSX {
     interface G33AlertAttributes {
         "type": 'info' | 'success' | 'warning' | 'error';
     }
+    interface G33ArticleCardAttributes {
+        "postTitle": string;
+        "category": string;
+        "excerpt": string;
+        "imageUrl": string;
+        "author": string;
+        "publishedAt": string;
+        "postUrl": string;
+    }
     interface G33ButtonAttributes {
         "variant": 'primary' | 'secondary';
         "size": 'sm' | 'md' | 'lg';
@@ -89,6 +131,7 @@ declare namespace LocalJSX {
 
     interface IntrinsicElements {
         "g33-alert": Omit<G33Alert, keyof G33AlertAttributes> & { [K in keyof G33Alert & keyof G33AlertAttributes]?: G33Alert[K] } & { [K in keyof G33Alert & keyof G33AlertAttributes as `attr:${K}`]?: G33AlertAttributes[K] } & { [K in keyof G33Alert & keyof G33AlertAttributes as `prop:${K}`]?: G33Alert[K] };
+        "g33-article-card": Omit<G33ArticleCard, keyof G33ArticleCardAttributes> & { [K in keyof G33ArticleCard & keyof G33ArticleCardAttributes]?: G33ArticleCard[K] } & { [K in keyof G33ArticleCard & keyof G33ArticleCardAttributes as `attr:${K}`]?: G33ArticleCardAttributes[K] } & { [K in keyof G33ArticleCard & keyof G33ArticleCardAttributes as `prop:${K}`]?: G33ArticleCard[K] } & OneOf<"postTitle", G33ArticleCard["postTitle"], G33ArticleCardAttributes["postTitle"]> & OneOf<"category", G33ArticleCard["category"], G33ArticleCardAttributes["category"]> & OneOf<"imageUrl", G33ArticleCard["imageUrl"], G33ArticleCardAttributes["imageUrl"]> & OneOf<"publishedAt", G33ArticleCard["publishedAt"], G33ArticleCardAttributes["publishedAt"]>;
         "g33-button": Omit<G33Button, keyof G33ButtonAttributes> & { [K in keyof G33Button & keyof G33ButtonAttributes]?: G33Button[K] } & { [K in keyof G33Button & keyof G33ButtonAttributes as `attr:${K}`]?: G33ButtonAttributes[K] } & { [K in keyof G33Button & keyof G33ButtonAttributes as `prop:${K}`]?: G33Button[K] };
         "g33-showcase": G33Showcase;
     }
@@ -98,6 +141,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "g33-alert": LocalJSX.IntrinsicElements["g33-alert"] & JSXBase.HTMLAttributes<HTMLG33AlertElement>;
+            "g33-article-card": LocalJSX.IntrinsicElements["g33-article-card"] & JSXBase.HTMLAttributes<HTMLG33ArticleCardElement>;
             "g33-button": LocalJSX.IntrinsicElements["g33-button"] & JSXBase.HTMLAttributes<HTMLG33ButtonElement>;
             "g33-showcase": LocalJSX.IntrinsicElements["g33-showcase"] & JSXBase.HTMLAttributes<HTMLG33ShowcaseElement>;
         }
