@@ -6,63 +6,100 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
+    interface G33Alert {
         /**
-          * The first name
+          * @default 'info'
          */
-        "first": string;
+        "type": 'info' | 'success' | 'warning' | 'error';
+    }
+    interface G33Button {
         /**
-          * The last name
+          * @default false
          */
-        "last": string;
+        "disabled": boolean;
         /**
-          * The middle name
+          * @default 'md'
          */
-        "middle": string;
+        "size": 'sm' | 'md' | 'lg';
+        /**
+          * @default 'primary'
+         */
+        "variant": 'primary' | 'secondary';
+    }
+    interface G33Showcase {
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLG33AlertElement extends Components.G33Alert, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLG33AlertElement: {
+        prototype: HTMLG33AlertElement;
+        new (): HTMLG33AlertElement;
+    };
+    interface HTMLG33ButtonElement extends Components.G33Button, HTMLStencilElement {
+    }
+    var HTMLG33ButtonElement: {
+        prototype: HTMLG33ButtonElement;
+        new (): HTMLG33ButtonElement;
+    };
+    interface HTMLG33ShowcaseElement extends Components.G33Showcase, HTMLStencilElement {
+    }
+    var HTMLG33ShowcaseElement: {
+        prototype: HTMLG33ShowcaseElement;
+        new (): HTMLG33ShowcaseElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "g33-alert": HTMLG33AlertElement;
+        "g33-button": HTMLG33ButtonElement;
+        "g33-showcase": HTMLG33ShowcaseElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
+    interface G33Alert {
         /**
-          * The first name
+          * @default 'info'
          */
-        "first"?: string;
+        "type"?: 'info' | 'success' | 'warning' | 'error';
+    }
+    interface G33Button {
         /**
-          * The last name
+          * @default false
          */
-        "last"?: string;
+        "disabled"?: boolean;
         /**
-          * The middle name
+          * @default 'md'
          */
-        "middle"?: string;
+        "size"?: 'sm' | 'md' | 'lg';
+        /**
+          * @default 'primary'
+         */
+        "variant"?: 'primary' | 'secondary';
+    }
+    interface G33Showcase {
     }
 
-    interface MyComponentAttributes {
-        "first": string;
-        "middle": string;
-        "last": string;
+    interface G33AlertAttributes {
+        "type": 'info' | 'success' | 'warning' | 'error';
+    }
+    interface G33ButtonAttributes {
+        "variant": 'primary' | 'secondary';
+        "size": 'sm' | 'md' | 'lg';
+        "disabled": boolean;
     }
 
     interface IntrinsicElements {
-        "my-component": Omit<MyComponent, keyof MyComponentAttributes> & { [K in keyof MyComponent & keyof MyComponentAttributes]?: MyComponent[K] } & { [K in keyof MyComponent & keyof MyComponentAttributes as `attr:${K}`]?: MyComponentAttributes[K] } & { [K in keyof MyComponent & keyof MyComponentAttributes as `prop:${K}`]?: MyComponent[K] };
+        "g33-alert": Omit<G33Alert, keyof G33AlertAttributes> & { [K in keyof G33Alert & keyof G33AlertAttributes]?: G33Alert[K] } & { [K in keyof G33Alert & keyof G33AlertAttributes as `attr:${K}`]?: G33AlertAttributes[K] } & { [K in keyof G33Alert & keyof G33AlertAttributes as `prop:${K}`]?: G33Alert[K] };
+        "g33-button": Omit<G33Button, keyof G33ButtonAttributes> & { [K in keyof G33Button & keyof G33ButtonAttributes]?: G33Button[K] } & { [K in keyof G33Button & keyof G33ButtonAttributes as `attr:${K}`]?: G33ButtonAttributes[K] } & { [K in keyof G33Button & keyof G33ButtonAttributes as `prop:${K}`]?: G33Button[K] };
+        "g33-showcase": G33Showcase;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.IntrinsicElements["my-component"] & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "g33-alert": LocalJSX.IntrinsicElements["g33-alert"] & JSXBase.HTMLAttributes<HTMLG33AlertElement>;
+            "g33-button": LocalJSX.IntrinsicElements["g33-button"] & JSXBase.HTMLAttributes<HTMLG33ButtonElement>;
+            "g33-showcase": LocalJSX.IntrinsicElements["g33-showcase"] & JSXBase.HTMLAttributes<HTMLG33ShowcaseElement>;
         }
     }
 }

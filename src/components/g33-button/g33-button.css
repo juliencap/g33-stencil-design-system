@@ -1,0 +1,42 @@
+:host {
+  display: inline-block;
+}
+
+.button {
+  border: 0;
+  border-radius: 6px;
+  padding: 10px 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.button--primary {
+  background: #123c7c;
+  color: white;
+}
+
+.button--secondary {
+  background: white;
+  color: #123c7c;
+  border: 1px solid #123c7c;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.button--sm {
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+.button--md {
+  padding: 10px 16px;
+  font-size: 14px;
+}
+
+.button--lg {
+  padding: 14px 24px;
+  font-size: 16px;
+}
