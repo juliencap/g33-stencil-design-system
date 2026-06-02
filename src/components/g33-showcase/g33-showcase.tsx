@@ -29,13 +29,25 @@ export class G33Showcase {
         <section>
           <h2>Alerts</h2>
 
-          <g33-alert type="info">Informations sur le mercato</g33-alert>
-
           <g33-alert type="success">Article publié avec succès</g33-alert>
 
-          <g33-alert type="warning">Rumeur non confirmée</g33-alert>
+          <g33-alert type="warning">Article en cours d'édition</g33-alert>
 
-          <g33-alert type="error">Erreur de chargement</g33-alert>
+          <g33-alert type="error">Article supprimé</g33-alert>
+        </section>
+
+        <section>
+          <h2>Article card</h2>
+
+          <g33-article-card
+            postTitle="Christophe Dugarry : « On a un président, un actionnaire, qui est transparent. Il n’y a rien d’humain dans ce club. »"
+            category="Médias"
+            excerpt="Dans l’émission Rothen s’enflamme (RMC), Christophe Dugarry a donné son avis sur le sujet Cannes, Bordeaux, les clubs historiques sont-ils..."
+            imageUrl="https://www.girondins33.com/storage/2024/02/logo-girondins-bordeaux-sc-1-800x445.webp"
+            author="Julien"
+            publishedAt="27 février 2025"
+            postUrl="https://www.girondins33.com/Actualites/72512-christophe-dugarry-on-a-un-president-un-actionnaire-qui-est-transparent-il-ny-a-rien-dhumain-dans-ce-club"
+          ></g33-article-card>
         </section>
       </main>
     );
