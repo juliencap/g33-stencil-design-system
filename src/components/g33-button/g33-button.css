@@ -8,11 +8,22 @@
   padding: var(--g33-spacing-sm) var(--g33-spacing-md);
   font-weight: var(--g33-font-weight-semibold);
   cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
 }
+
+/* Variants */
 
 .button--primary {
   background: var(--g33-color-primary);
   color: var(--g33-color-white);
+}
+
+.button--primary:hover:not(:disabled) {
+  background: var(--g33-color-primary-hover);
 }
 
 .button--secondary {
@@ -21,22 +32,29 @@
   border: var(--g33-border-width) solid var(--g33-color-secondary);
 }
 
+.button--secondary:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
 .button--ghost {
   background: transparent;
   color: var(--g33-color-white);
   border: var(--g33-border-width) solid var(--g33-color-white);
-  transition: all 0.2s ease;
 }
 
-.button--ghost:hover {
+.button--ghost:hover:not(:disabled) {
   background: var(--g33-color-white);
   color: var(--g33-color-primary);
 }
+
+/* États */
 
 .button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
+
+/* Sizes */
 
 .button--sm {
   padding: var(--g33-spacing-xs) var(--g33-spacing-sm);
@@ -52,6 +70,8 @@
   padding: var(--g33-spacing-md) var(--g33-spacing-lg);
   font-size: var(--g33-font-size-md);
 }
+
+/* Accessibilité */
 
 .button:focus-visible {
   outline: 2px solid var(--g33-color-info);

@@ -32,7 +32,9 @@ export class G33Showcase {
 
           <div class="demo-row">
             <g33-button variant="secondary">Secondaire</g33-button>
-            <g33-button disabled>Désactivé</g33-button>
+            <g33-button variant="secondary" disabled>
+              Désactivé
+            </g33-button>
           </div>
         </section>
 

@@ -11,7 +11,7 @@
 }
 
 .entry-content {
-  line-height: var(--g33-text-line-height);
+  line-height: var(--g33-line-height-default);
 }
 
 .below-entry-meta {
