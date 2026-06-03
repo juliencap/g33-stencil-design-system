@@ -12,8 +12,6 @@ export class G33Showcase {
     const token = Env.STORYBLOK_TOKEN;
     const response = await fetch(`https://api.storyblok.com/v2/cdn/stories/home?version=draft&token=${token}`);
     const data = await response.json();
-    console.log(data);
-    console.log(this.hero);
 
     this.hero = data.story.content.body.find(block => block.component === 'HeroBanner');
   }
@@ -58,6 +56,7 @@ export class G33Showcase {
             imageUrl="https://www.girondins33.com/storage/2024/02/logo-girondins-bordeaux-sc-1-800x445.webp"
             author="Julien"
             publishedAt="27 février 2025"
+            publishedDateTime="2025-02-27"
             postUrl="https://www.girondins33.com/Actualites/72512-christophe-dugarry-on-a-un-president-un-actionnaire-qui-est-transparent-il-ny-a-rien-dhumain-dans-ce-club"
           ></g33-article-card>
         </section>
@@ -74,8 +73,10 @@ export class G33Showcase {
             titleText={this.hero.titleText}
             subtitle={this.hero.subtitle}
             imageUrl={this.hero.image?.filename}
+            imageAlt={this.hero.image?.alt}
             ctaLabel={this.hero.ctaLabel}
             ctaUrl={this.hero.ctaUrl?.url || '#'}
+            ctaTarget={this.hero.ctaUrl?.target}
           />
         </section>
       </main>

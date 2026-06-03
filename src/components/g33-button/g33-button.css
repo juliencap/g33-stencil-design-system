@@ -52,3 +52,8 @@
   padding: var(--g33-spacing-md) var(--g33-spacing-lg);
   font-size: var(--g33-font-size-md);
 }
+
+.button:focus-visible {
+  outline: 2px solid var(--g33-color-info);
+  outline-offset: 2px;
+}

@@ -9,14 +9,16 @@ export class G33HeroBanner {
   @Prop() titleText!: string;
   @Prop() subtitle?: string;
   @Prop() imageUrl?: string;
+  @Prop() imageAlt?: string;
 
   @Prop() ctaLabel?: string;
   @Prop() ctaUrl?: string;
+  @Prop() ctaTarget?: string;
 
   render() {
     return (
       <section class="hero-banner">
-        {this.imageUrl && <img class="hero-banner__image" src={this.imageUrl} alt="" />}
+        {this.imageUrl && <img class="hero-banner__image" src={this.imageUrl} alt={this.imageAlt || ''} />}
 
         <div class="hero-banner__overlay"></div>
 
@@ -26,7 +28,7 @@ export class G33HeroBanner {
           {this.subtitle && <p>{this.subtitle}</p>}
 
           {this.ctaUrl && this.ctaLabel && (
-            <a href={this.ctaUrl}>
+            <a href={this.ctaUrl} target={this.ctaTarget} rel={this.ctaTarget === '_blank' ? 'noopener noreferrer' : undefined}>
               <g33-button variant="ghost">{this.ctaLabel}</g33-button>
             </a>
           )}

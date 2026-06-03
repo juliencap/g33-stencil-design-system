@@ -23,6 +23,7 @@ export namespace Components {
          */
         "postUrl": string;
         "publishedAt": string;
+        "publishedDateTime"?: string;
     }
     interface G33Button {
         /**
@@ -40,7 +41,9 @@ export namespace Components {
     }
     interface G33HeroBanner {
         "ctaLabel"?: string;
+        "ctaTarget"?: string;
         "ctaUrl"?: string;
+        "imageAlt"?: string;
         "imageUrl"?: string;
         "subtitle"?: string;
         "titleText": string;
@@ -107,6 +110,7 @@ declare namespace LocalJSX {
          */
         "postUrl"?: string;
         "publishedAt": string;
+        "publishedDateTime"?: string;
     }
     interface G33Button {
         /**
@@ -124,7 +128,9 @@ declare namespace LocalJSX {
     }
     interface G33HeroBanner {
         "ctaLabel"?: string;
+        "ctaTarget"?: string;
         "ctaUrl"?: string;
+        "imageAlt"?: string;
         "imageUrl"?: string;
         "subtitle"?: string;
         "titleText": string;
@@ -142,6 +148,7 @@ declare namespace LocalJSX {
         "imageUrl": string;
         "author": string;
         "publishedAt": string;
+        "publishedDateTime": string;
         "postUrl": string;
     }
     interface G33ButtonAttributes {
@@ -153,8 +160,10 @@ declare namespace LocalJSX {
         "titleText": string;
         "subtitle": string;
         "imageUrl": string;
+        "imageAlt": string;
         "ctaLabel": string;
         "ctaUrl": string;
+        "ctaTarget": string;
     }
 
     interface IntrinsicElements {

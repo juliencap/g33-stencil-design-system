@@ -12,6 +12,7 @@ export class G33ArticleCard {
   @Prop() imageUrl!: string;
   @Prop() author?: string;
   @Prop() publishedAt!: string;
+  @Prop() publishedDateTime?: string;
   @Prop() postUrl: string = '#';
 
   render() {
@@ -36,7 +37,9 @@ export class G33ArticleCard {
 
           <div class="below-entry-meta">
             <span class="posted-on">
-              <time class="entry-date">{this.publishedAt}</time>
+              <time class="entry-date" dateTime={this.publishedDateTime}>
+                {this.publishedAt}
+              </time>
             </span>
 
             {this.author && (
@@ -48,7 +51,9 @@ export class G33ArticleCard {
 
           <div class="entry-content clearfix">
             {this.excerpt && <p>{this.excerpt}</p>}
-            <g33-button variant="secondary">Lire la suite</g33-button>
+            <a href={this.postUrl} aria-label={`Lire la suite : ${this.postTitle}`}>
+              <g33-button variant="secondary">Lire la suite</g33-button>
+            </a>
           </div>
         </div>
       </article>

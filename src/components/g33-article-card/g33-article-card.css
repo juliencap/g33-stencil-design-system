@@ -43,3 +43,7 @@
 .posted-on {
   margin-right: var(--g33-spacing-md);
 }
+.button:focus-visible {
+  outline: 2px solid var(--g33-color-info);
+  outline-offset: 2px;
+}
