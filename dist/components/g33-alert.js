@@ -1,1 +1,0 @@
-import{G as o,d as s}from"./p-CqomHd3k.js";const m=o,p=s;export{m as G33Alert,p as defineCustomElement}

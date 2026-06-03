@@ -1,8 +1,5 @@
 :host {
   display: block;
-}
-
-.article-content {
   font-family: var(--g33-font-family);
 }
 

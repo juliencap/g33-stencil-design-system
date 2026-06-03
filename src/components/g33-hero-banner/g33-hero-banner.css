@@ -1,5 +1,6 @@
 :host {
   display: block;
+  font-family: var(--g33-font-family);
 }
 .hero-banner {
   position: relative;

@@ -1,5 +1,6 @@
 :host {
   display: inline-block;
+  font-family: var(--g33-font-family);
 }
 
 .button {

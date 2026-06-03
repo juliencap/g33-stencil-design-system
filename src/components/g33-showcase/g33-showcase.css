@@ -1,6 +1,6 @@
 :host {
   display: block;
-  font-family: Arial, sans-serif;
+  font-family: var(--g33-font-family);
 }
 
 main {
