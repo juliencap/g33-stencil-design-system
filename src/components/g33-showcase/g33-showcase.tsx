@@ -1,4 +1,4 @@
-import { Component, h } from '@stencil/core';
+import { Component, Env, h, State } from '@stencil/core';
 
 @Component({
   tag: 'g33-showcase',
@@ -6,6 +6,18 @@ import { Component, h } from '@stencil/core';
   shadow: true,
 })
 export class G33Showcase {
+  @State() hero: any;
+
+  async componentWillLoad() {
+    const token = Env.STORYBLOK_TOKEN;
+    const response = await fetch(`https://api.storyblok.com/v2/cdn/stories/home?version=draft&token=${token}`);
+    const data = await response.json();
+    console.log(data);
+    console.log(this.hero);
+
+    this.hero = data.story.content.body.find(block => block.component === 'HeroBanner');
+  }
+
   render() {
     return (
       <main>
@@ -52,22 +64,18 @@ export class G33Showcase {
 
         <section>
           <h2>Hero simple</h2>
-          <g33-hero-banner titleText="Toute l'actualité des Girondins" imageUrl="https://www.girondins33.com/storage/2024/02/logo-girondins-bordeaux-sc-1-800x445.webp" />
+          <g33-hero-banner titleText={this.hero.titleText} imageUrl={this.hero.image?.filename} />
 
           <h2>Hero avec sous-titre</h2>
-          <g33-hero-banner
-            titleText="Toute l'actualité des Girondins"
-            subtitle="Mercato, analyses et réactions"
-            imageUrl="https://www.girondins33.com/storage/2024/02/logo-girondins-bordeaux-sc-1-800x445.webp"
-          />
+          <g33-hero-banner titleText={this.hero.titleText} subtitle={this.hero.subtitle} imageUrl={this.hero.image?.filename} />
 
           <h2>Hero</h2>
           <g33-hero-banner
-            titleText="Toute l'actualité des Girondins"
-            subtitle="Mercato, analyses, interviews et réactions autour du club"
-            imageUrl="https://www.girondins33.com/storage/2024/02/logo-girondins-bordeaux-sc-1-800x445.webp"
-            ctaLabel="Voir les articles"
-            ctaUrl="#"
+            titleText={this.hero.titleText}
+            subtitle={this.hero.subtitle}
+            imageUrl={this.hero.image?.filename}
+            ctaLabel={this.hero.ctaLabel}
+            ctaUrl={this.hero.ctaUrl?.url || '#'}
           />
         </section>
       </main>
