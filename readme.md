@@ -1,16 +1,21 @@
 # G33 Design System
 
-Mini Design System développé avec StencilJS.
+Design System built with StencilJS and TypeScript.
 
-## Objectifs
+## Objectives
 
-- Découvrir Stencil et les Web Components
-- Construire une bibliothèque de composants réutilisables
-- Utiliser des Design Tokens CSS
-- Intégrer un CMS Headless (Storyblok)
-- Prendre en compte les bonnes pratiques d'accessibilité
+- Discover Stencil and Web Components
+- Build a reusable component library
+- Use CSS Design Tokens
+- Integrate a Headless CMS (Storyblok)
+- Apply accessibility best practices
 
-## Stack technique
+## Overview
+
+![Homepage](docs/image_hero.png)
+![Homepage](docs/image_article_card.png)
+
+## Technical Stack
 
 - StencilJS
 - TypeScript
@@ -19,11 +24,11 @@ Mini Design System développé avec StencilJS.
 - Storyblok
 - CSS Variables (Design Tokens)
 
-## Composants disponibles
+## Available Components
 
 ### g33-button
 
-Bouton réutilisable avec variantes :
+Reusable button component with multiple variants:
 
 - Primary
 - Secondary
@@ -31,7 +36,7 @@ Bouton réutilisable avec variantes :
 
 ### g33-alert
 
-Alertes contextuelles :
+Contextual alerts:
 
 - Success
 - Warning
@@ -39,35 +44,37 @@ Alertes contextuelles :
 
 ### g33-article-card
 
-Carte d'article avec :
+Article card component featuring:
 
 - image
-- catégorie
-- auteur
-- date
-- bouton d'action
+- category
+- publication date
+- title
+- excerpt
+- optional CTA
 
 ### g33-hero-banner
 
-Hero Banner configurable depuis Storyblok :
+Hero Banner component configurable through Storyblok:
 
-- titre
-- sous-titre
+- title
+- subtitle
 - image
-- CTA
-- ouverture nouvel onglet
+- CTA label
+- CTA URL
+- target (\_self / \_blank)
 
 ## Design Tokens
 
-Le Design System s'appuie sur des Design Tokens CSS :
+The Design System relies on CSS Design Tokens for:
 
-- couleurs
-- espacements
-- typographie
-- rayons
-- ombres
+- colors
+- spacing
+- typography
+- border radius
+- shadows
 
-Exemple :
+Example:
 
 ```css
 --g33-color-primary
@@ -75,33 +82,49 @@ Exemple :
 --g33-radius-lg
 ```
 
-## Accessibilité
+## Accessibility
 
-Mise en place des bonnes pratiques suivantes :
+Implemented accessibility best practices:
 
-- attributs alt sur les images
-- élément `<time datetime>`
-- styles `:focus-visible`
-- `aria-label` contextuels
-- hiérarchie de titres
+- image alt attributes
+- semantic `<time datetime>`
+- `:focus-visible` states
+- contextual `aria-label`
+- heading hierarchy
 
-## Intégration Storyblok
+## Storyblok Integration
 
-Storyblok est utilisé comme CMS Headless.
+Storyblok is used as a Headless CMS.
 
-Exemple de flux :
+Data flow:
 
-Storyblok → API JSON → Stencil → Web Components
+```text
+Storyblok
+    ↓
+JSON API
+    ↓
+Stencil Components
+    ↓
+Web Components
+```
 
-Le composant Hero Banner récupère dynamiquement :
+The Hero Banner retrieves:
 
-- titre
-- sous-titre
+- title
+- subtitle
 - image
-- texte du CTA
-- URL du CTA
-- ouverture dans un nouvel onglet
-- texte alternatif de l'image
+- CTA label
+- CTA URL
+- target
+- image alt text
+
+## React Consumer Application
+
+A React application demonstrating the integration of the Design System components with Storyblok and the WordPress REST API.
+
+🔗 [Repository](https://github.com/juliencap/g33-react-consumer)
+
+🌐 [Live Demo](https://g33-react-consumer.vercel.app/)
 
 ## Installation
 
@@ -109,7 +132,7 @@ Le composant Hero Banner récupère dynamiquement :
 npm install
 ```
 
-## Lancement
+## Development
 
 ```bash
 npm start
@@ -120,3 +143,7 @@ npm start
 ```bash
 npm run build
 ```
+
+## Author
+
+Julien Cap
