@@ -51,7 +51,7 @@ export class G33ArticleCard {
 
           <div class="entry-content clearfix">
             {this.excerpt && <p>{this.excerpt}</p>}
-            <a href={this.postUrl} aria-label={`Lire la suite : ${this.postTitle}`}>
+            <a href={this.postUrl} aria-label={`Lire la suite : ${this.postTitle}`} target="_blank" rel="noopener noreferrer">
               <g33-button variant="secondary">Lire la suite</g33-button>
             </a>
           </div>
