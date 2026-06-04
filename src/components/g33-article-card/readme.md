@@ -7,16 +7,17 @@
 
 ## Properties
 
-| Property                   | Attribute             | Description | Type     | Default     |
-| -------------------------- | --------------------- | ----------- | -------- | ----------- |
-| `author`                   | `author`              |             | `string` | `undefined` |
-| `category` _(required)_    | `category`            |             | `string` | `undefined` |
-| `excerpt`                  | `excerpt`             |             | `string` | `undefined` |
-| `imageUrl` _(required)_    | `image-url`           |             | `string` | `undefined` |
-| `postTitle` _(required)_   | `post-title`          |             | `string` | `undefined` |
-| `postUrl`                  | `post-url`            |             | `string` | `'#'`       |
-| `publishedAt` _(required)_ | `published-at`        |             | `string` | `undefined` |
-| `publishedDateTime`        | `published-date-time` |             | `string` | `undefined` |
+| Property                   | Attribute             | Description | Type      | Default     |
+| -------------------------- | --------------------- | ----------- | --------- | ----------- |
+| `author`                   | `author`              |             | `string`  | `undefined` |
+| `category` _(required)_    | `category`            |             | `string`  | `undefined` |
+| `excerpt`                  | `excerpt`             |             | `string`  | `undefined` |
+| `imageUrl` _(required)_    | `image-url`           |             | `string`  | `undefined` |
+| `postTitle` _(required)_   | `post-title`          |             | `string`  | `undefined` |
+| `postUrl`                  | `post-url`            |             | `string`  | `'#'`       |
+| `publishedAt` _(required)_ | `published-at`        |             | `string`  | `undefined` |
+| `publishedDateTime`        | `published-date-time` |             | `string`  | `undefined` |
+| `showCta`                  | `show-cta`            |             | `boolean` | `false`     |
 
 
 ## Dependencies

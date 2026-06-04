@@ -24,6 +24,10 @@ export namespace Components {
         "postUrl": string;
         "publishedAt": string;
         "publishedDateTime"?: string;
+        /**
+          * @default false
+         */
+        "showCta": boolean;
     }
     interface G33Button {
         /**
@@ -111,6 +115,10 @@ declare namespace LocalJSX {
         "postUrl"?: string;
         "publishedAt": string;
         "publishedDateTime"?: string;
+        /**
+          * @default false
+         */
+        "showCta"?: boolean;
     }
     interface G33Button {
         /**
@@ -149,6 +157,7 @@ declare namespace LocalJSX {
         "author": string;
         "publishedAt": string;
         "publishedDateTime": string;
+        "showCta": boolean;
         "postUrl": string;
     }
     interface G33ButtonAttributes {

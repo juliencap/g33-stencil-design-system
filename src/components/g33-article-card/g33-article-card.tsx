@@ -13,6 +13,7 @@ export class G33ArticleCard {
   @Prop() author?: string;
   @Prop() publishedAt!: string;
   @Prop() publishedDateTime?: string;
+  @Prop() showCta: boolean = false;
   @Prop() postUrl: string = '#';
 
   render() {
@@ -42,9 +43,11 @@ export class G33ArticleCard {
 
           <div class="entry-content clearfix">
             {this.excerpt && <p>{this.excerpt}</p>}
-            <a href={this.postUrl} aria-label={`Lire la suite : ${this.postTitle}`} target="_blank" rel="noopener noreferrer">
-              <g33-button variant="secondary">Lire la suite</g33-button>
-            </a>
+            {this.showCta && (
+              <a href={this.postUrl} aria-label={`Lire la suite : ${this.postTitle}`} target="_blank" rel="noopener noreferrer">
+                <g33-button variant="secondary">Lire la suite</g33-button>
+              </a>
+            )}
           </div>
         </div>
       </article>

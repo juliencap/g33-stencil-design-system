@@ -6,6 +6,7 @@ export declare class G33ArticleCard {
     author?: string;
     publishedAt: string;
     publishedDateTime?: string;
+    showCta: boolean;
     postUrl: string;
     render(): any;
 }
