@@ -13,7 +13,7 @@ const G33Alert = class {
 };
 G33Alert.style = g33AlertCss();
 
-const g33ArticleCardCss = () => `:host{display:block;font-family:var(--g33-font-family)}.entry-title{font-weight:var(--g33-title-weight)}.entry-content{line-height:var(--g33-line-height-default)}.post{max-width:720px}.featured-image img{width:100%;display:block}.cat-links::after{content:' · '}.entry-title a{color:var(--g33-color-secondary);text-decoration:none}.above-entry-meta{color:var(--g33-color-text-light);margin-top:var(--g33-spacing-lg)}.button:focus-visible{outline:2px solid var(--g33-color-info);outline-offset:2px}.entry-content{line-height:var(--g33-line-height-default);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}`;
+const g33ArticleCardCss = () => `:host{display:block;font-family:var(--g33-font-family)}.entry-title{font-weight:var(--g33-title-weight)}.entry-content{line-height:var(--g33-line-height-default);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.entry-content p{margin-top:inherit}.post{max-width:720px}.featured-image img{width:100%;display:block}.cat-links::after{content:' · '}.entry-title a{color:var(--g33-color-secondary);text-decoration:none}.above-entry-meta{color:var(--g33-color-text-light);margin-top:var(--g33-spacing-lg)}.button:focus-visible{outline:2px solid var(--g33-color-info);outline-offset:2px}`;
 
 const G33ArticleCard = class {
     constructor(hostRef) {

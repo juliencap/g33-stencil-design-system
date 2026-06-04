@@ -9,6 +9,13 @@
 
 .entry-content {
   line-height: var(--g33-line-height-default);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.entry-content p {
+  margin-top: inherit;
 }
 
 .post {
@@ -37,11 +44,4 @@
 .button:focus-visible {
   outline: 2px solid var(--g33-color-info);
   outline-offset: 2px;
-}
-.entry-content {
-  line-height: var(--g33-line-height-default);
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
 }
