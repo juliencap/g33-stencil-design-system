@@ -5,6 +5,7 @@
 
 .entry-title {
   font-weight: var(--g33-title-weight);
+  line-height: 1.2;
 }
 
 .entry-content {
@@ -44,4 +45,15 @@
 .button:focus-visible {
   outline: 2px solid var(--g33-color-info);
   outline-offset: 2px;
+}
+
+.above-entry-meta {
+  margin-bottom: 0.75rem;
+}
+
+.entry-header {
+  margin-bottom: 0.5rem;
+}
+.entry-title {
+  margin-bottom: 0;
 }
