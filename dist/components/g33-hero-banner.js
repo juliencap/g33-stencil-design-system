@@ -1,1 +1,0 @@
-import{G as o,d as p}from"./p-CS4Qp8E3.js";const s=o,r=p;export{s as G33HeroBanner,r as defineCustomElement}

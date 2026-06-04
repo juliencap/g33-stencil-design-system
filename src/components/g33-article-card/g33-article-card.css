@@ -11,11 +11,6 @@
   line-height: var(--g33-line-height-default);
 }
 
-.below-entry-meta {
-  margin: var(--g33-spacing-sm) 0 var(--g33-spacing-md);
-  color: var(--g33-color-text-light);
-}
-
 .post {
   max-width: 720px;
 }
@@ -25,8 +20,8 @@
   display: block;
 }
 
-.cat-links {
-  color: var(--g33-color-secondary);
+.cat-links::after {
+  content: ' · ';
 }
 
 .entry-title a {
@@ -35,11 +30,10 @@
 }
 
 .above-entry-meta {
+  color: var(--g33-color-text-light);
   margin-top: var(--g33-spacing-lg);
 }
-.posted-on {
-  margin-right: var(--g33-spacing-md);
-}
+
 .button:focus-visible {
   outline: 2px solid var(--g33-color-info);
   outline-offset: 2px;

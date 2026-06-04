@@ -1,1 +1,0 @@
-import{G as o,d as p}from"./p-DLwPpl8H.js";const s=o,r=p;export{s as G33Button,r as defineCustomElement}

@@ -27,6 +27,11 @@ export class G33ArticleCard {
         <div class="article-content">
           <div class="above-entry-meta">
             <span class="cat-links">{this.category}</span>
+            <span class="posted-on">
+              <time class="entry-date" dateTime={this.publishedDateTime}>
+                {this.publishedAt}
+              </time>
+            </span>
           </div>
 
           <header class="entry-header">
@@ -34,20 +39,6 @@ export class G33ArticleCard {
               <a href={this.postUrl}>{this.postTitle}</a>
             </h2>
           </header>
-
-          <div class="below-entry-meta">
-            <span class="posted-on">
-              <time class="entry-date" dateTime={this.publishedDateTime}>
-                {this.publishedAt}
-              </time>
-            </span>
-
-            {this.author && (
-              <span class="byline">
-                <span class="author vcard">{this.author}</span>
-              </span>
-            )}
-          </div>
 
           <div class="entry-content clearfix">
             {this.excerpt && <p>{this.excerpt}</p>}
