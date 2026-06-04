@@ -39,7 +39,7 @@
 
 .above-entry-meta {
   color: var(--g33-color-text-light);
-  margin-top: var(--g33-spacing-lg);
+  margin-top: var(--g33-spacing-md);
 }
 
 .button:focus-visible {
