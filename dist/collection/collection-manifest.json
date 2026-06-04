@@ -1,0 +1,17 @@
+{
+  "entries": [
+    "components/g33-alert/g33-alert.js",
+    "components/g33-article-card/g33-article-card.js",
+    "components/g33-button/g33-button.js",
+    "components/g33-hero-banner/g33-hero-banner.js",
+    "components/g33-showcase/g33-showcase.js"
+  ],
+  "mixins": [],
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "4.43.5",
+    "typescriptVersion": "5.8.3"
+  },
+  "collections": [],
+  "bundles": []
+}

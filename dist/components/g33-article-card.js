@@ -1,0 +1,1 @@
+import{G as o,d as r}from"./p-BqAIImrk.js";const s=o,m=r;export{s as G33ArticleCard,m as defineCustomElement}
