@@ -18,7 +18,6 @@
 
 ### Used by
 
- - [g33-article-card](../g33-article-card)
  - [g33-content-card](../g33-content-card)
  - [g33-hero-banner](../g33-hero-banner)
  - [g33-showcase](../g33-showcase)
@@ -26,7 +25,6 @@
 ### Graph
 ```mermaid
 graph TD;
-  g33-article-card --> g33-button
   g33-content-card --> g33-button
   g33-hero-banner --> g33-button
   g33-showcase --> g33-button

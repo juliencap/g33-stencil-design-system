@@ -11,7 +11,8 @@
 
 - [g33-button](../g33-button)
 - [g33-alert](../g33-alert)
-- [g33-article-card](../g33-article-card)
+- [g33-content-card](../g33-content-card)
+- [g33-content-list-item](../g33-content-list-item)
 - [g33-hero-banner](../g33-hero-banner)
 
 ### Graph
@@ -19,9 +20,10 @@
 graph TD;
   g33-showcase --> g33-button
   g33-showcase --> g33-alert
-  g33-showcase --> g33-article-card
+  g33-showcase --> g33-content-card
+  g33-showcase --> g33-content-list-item
   g33-showcase --> g33-hero-banner
-  g33-article-card --> g33-button
+  g33-content-card --> g33-button
   g33-hero-banner --> g33-button
   style g33-showcase fill:#f9f,stroke:#333,stroke-width:4px
 ```

@@ -49,38 +49,54 @@ export class G33Showcase {
         </section>
 
         <section>
-          <h2>Article card</h2>
+          <h2>Content card</h2>
 
-          <g33-article-card
-            postTitle="Christophe Dugarry : « On a un président, un actionnaire, qui est transparent. Il n’y a rien d’humain dans ce club. »"
+          <g33-content-card
+            contentTitle="Christophe Dugarry : « On a un président, un actionnaire, qui est transparent. Il n’y a rien d’humain dans ce club. »"
             category="Médias"
             excerpt="Dans l’émission Rothen s’enflamme (RMC), Christophe Dugarry a donné son avis sur le sujet Cannes, Bordeaux, les clubs historiques sont-ils..."
             imageUrl="https://www.girondins33.com/storage/2024/02/logo-girondins-bordeaux-sc-1-800x445.webp"
             author="Julien"
             publishedAt="27 février 2025"
             publishedDateTime="2025-02-27"
-            postUrl="https://www.girondins33.com/Actualites/72512-christophe-dugarry-on-a-un-president-un-actionnaire-qui-est-transparent-il-ny-a-rien-dhumain-dans-ce-club"
-          ></g33-article-card>
+            contentUrl="https://www.girondins33.com/Actualites/72512-christophe-dugarry-on-a-un-president-un-actionnaire-qui-est-transparent-il-ny-a-rien-dhumain-dans-ce-club"
+          ></g33-content-card>
         </section>
 
         <section>
-          <h2>Hero simple</h2>
-          <g33-hero-banner titleText={this.hero.titleText} imageUrl={this.hero.image?.filename} />
+          <h2>Content List Item</h2>
 
-          <h2>Hero avec sous-titre</h2>
-          <g33-hero-banner titleText={this.hero.titleText} subtitle={this.hero.subtitle} imageUrl={this.hero.image?.filename} />
-
-          <h2>Hero</h2>
-          <g33-hero-banner
-            titleText={this.hero.titleText}
-            subtitle={this.hero.subtitle}
-            imageUrl={this.hero.image?.filename}
-            imageAlt={this.hero.image?.alt}
-            ctaLabel={this.hero.ctaLabel}
-            ctaUrl={this.hero.ctaUrl?.url || '#'}
-            ctaTarget={this.hero.ctaUrl?.target}
-          />
+          <g33-content-list-item
+            contentTitle="Christophe Dugarry : « On a un président, un actionnaire, qui est transparent. Il n’y a rien d’humain dans ce club. »"
+            category="Médias"
+            displayDate="27/02"
+            publishedDateTime="2025-02-27"
+            contentUrl="https://www.girondins33.com/Actualites/72512-christophe-dugarry-on-a-un-president-un-actionnaire-qui-est-transparent-il-ny-a-rien-dhumain-dans-ce-club"
+          ></g33-content-list-item>
         </section>
+
+        {this.hero && (
+          <section>
+            <h2>Hero Banner / Storyblok</h2>
+
+            <h3>Simple</h3>
+            <g33-hero-banner titleText={this.hero.titleText} imageUrl={this.hero.image?.filename} />
+
+            <h3>Avec sous-titre</h3>
+            <g33-hero-banner titleText={this.hero.titleText} subtitle={this.hero.subtitle} imageUrl={this.hero.image?.filename} />
+
+            <h3>Complet</h3>
+            <g33-hero-banner
+              titleText={this.hero.titleText}
+              subtitle={this.hero.subtitle}
+              imageUrl={this.hero.image?.filename}
+              imageAlt={this.hero.image?.alt}
+              ctaLabel={this.hero.ctaLabel}
+              ctaUrl={this.hero.ctaUrl?.url || '#'}
+              ctaTarget={this.hero.ctaUrl?.target}
+            />
+          </section>
+        )}
       </main>
     );
   }

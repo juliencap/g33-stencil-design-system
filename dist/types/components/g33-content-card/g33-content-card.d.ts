@@ -1,5 +1,5 @@
 export declare class G33ContentCard {
-    postTitle: string;
+    contentTitle: string;
     category: string;
     excerpt?: string;
     imageUrl: string;
@@ -7,6 +7,6 @@ export declare class G33ContentCard {
     publishedAt: string;
     publishedDateTime?: string;
     showCta: boolean;
-    postUrl: string;
+    contentUrl: string;
     render(): any;
 }

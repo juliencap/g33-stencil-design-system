@@ -1,9 +1,9 @@
 {
   "entries": [
     "components/g33-alert/g33-alert.js",
-    "components/g33-article-card/g33-article-card.js",
     "components/g33-button/g33-button.js",
     "components/g33-content-card/g33-content-card.js",
+    "components/g33-content-list-item/g33-content-list-item.js",
     "components/g33-hero-banner/g33-hero-banner.js",
     "components/g33-showcase/g33-showcase.js"
   ],

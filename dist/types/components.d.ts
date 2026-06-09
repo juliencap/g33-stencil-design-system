@@ -12,23 +12,6 @@ export namespace Components {
          */
         "type": 'info' | 'success' | 'warning' | 'error';
     }
-    interface G33ArticleCard {
-        "author"?: string;
-        "category": string;
-        "excerpt"?: string;
-        "imageUrl": string;
-        "postTitle": string;
-        /**
-          * @default '#'
-         */
-        "postUrl": string;
-        "publishedAt": string;
-        "publishedDateTime"?: string;
-        /**
-          * @default false
-         */
-        "showCta": boolean;
-    }
     interface G33Button {
         /**
           * @default false
@@ -46,19 +29,26 @@ export namespace Components {
     interface G33ContentCard {
         "author"?: string;
         "category": string;
-        "excerpt"?: string;
-        "imageUrl": string;
-        "postTitle": string;
+        "contentTitle": string;
         /**
           * @default '#'
          */
-        "postUrl": string;
+        "contentUrl": string;
+        "excerpt"?: string;
+        "imageUrl": string;
         "publishedAt": string;
         "publishedDateTime"?: string;
         /**
           * @default false
          */
         "showCta": boolean;
+    }
+    interface G33ContentListItem {
+        "category": string;
+        "contentTitle": string;
+        "contentUrl": string;
+        "displayDate": string;
+        "publishedDateTime": string;
     }
     interface G33HeroBanner {
         "ctaLabel"?: string;
@@ -79,12 +69,6 @@ declare global {
         prototype: HTMLG33AlertElement;
         new (): HTMLG33AlertElement;
     };
-    interface HTMLG33ArticleCardElement extends Components.G33ArticleCard, HTMLStencilElement {
-    }
-    var HTMLG33ArticleCardElement: {
-        prototype: HTMLG33ArticleCardElement;
-        new (): HTMLG33ArticleCardElement;
-    };
     interface HTMLG33ButtonElement extends Components.G33Button, HTMLStencilElement {
     }
     var HTMLG33ButtonElement: {
@@ -96,6 +80,12 @@ declare global {
     var HTMLG33ContentCardElement: {
         prototype: HTMLG33ContentCardElement;
         new (): HTMLG33ContentCardElement;
+    };
+    interface HTMLG33ContentListItemElement extends Components.G33ContentListItem, HTMLStencilElement {
+    }
+    var HTMLG33ContentListItemElement: {
+        prototype: HTMLG33ContentListItemElement;
+        new (): HTMLG33ContentListItemElement;
     };
     interface HTMLG33HeroBannerElement extends Components.G33HeroBanner, HTMLStencilElement {
     }
@@ -111,9 +101,9 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "g33-alert": HTMLG33AlertElement;
-        "g33-article-card": HTMLG33ArticleCardElement;
         "g33-button": HTMLG33ButtonElement;
         "g33-content-card": HTMLG33ContentCardElement;
+        "g33-content-list-item": HTMLG33ContentListItemElement;
         "g33-hero-banner": HTMLG33HeroBannerElement;
         "g33-showcase": HTMLG33ShowcaseElement;
     }
@@ -126,23 +116,6 @@ declare namespace LocalJSX {
           * @default 'info'
          */
         "type"?: 'info' | 'success' | 'warning' | 'error';
-    }
-    interface G33ArticleCard {
-        "author"?: string;
-        "category": string;
-        "excerpt"?: string;
-        "imageUrl": string;
-        "postTitle": string;
-        /**
-          * @default '#'
-         */
-        "postUrl"?: string;
-        "publishedAt": string;
-        "publishedDateTime"?: string;
-        /**
-          * @default false
-         */
-        "showCta"?: boolean;
     }
     interface G33Button {
         /**
@@ -161,19 +134,26 @@ declare namespace LocalJSX {
     interface G33ContentCard {
         "author"?: string;
         "category": string;
-        "excerpt"?: string;
-        "imageUrl": string;
-        "postTitle": string;
+        "contentTitle": string;
         /**
           * @default '#'
          */
-        "postUrl"?: string;
+        "contentUrl"?: string;
+        "excerpt"?: string;
+        "imageUrl": string;
         "publishedAt": string;
         "publishedDateTime"?: string;
         /**
           * @default false
          */
         "showCta"?: boolean;
+    }
+    interface G33ContentListItem {
+        "category"?: string;
+        "contentTitle"?: string;
+        "contentUrl"?: string;
+        "displayDate"?: string;
+        "publishedDateTime"?: string;
     }
     interface G33HeroBanner {
         "ctaLabel"?: string;
@@ -190,24 +170,13 @@ declare namespace LocalJSX {
     interface G33AlertAttributes {
         "type": 'info' | 'success' | 'warning' | 'error';
     }
-    interface G33ArticleCardAttributes {
-        "postTitle": string;
-        "category": string;
-        "excerpt": string;
-        "imageUrl": string;
-        "author": string;
-        "publishedAt": string;
-        "publishedDateTime": string;
-        "showCta": boolean;
-        "postUrl": string;
-    }
     interface G33ButtonAttributes {
         "variant": 'primary' | 'secondary' | 'ghost';
         "size": 'sm' | 'md' | 'lg';
         "disabled": boolean;
     }
     interface G33ContentCardAttributes {
-        "postTitle": string;
+        "contentTitle": string;
         "category": string;
         "excerpt": string;
         "imageUrl": string;
@@ -215,7 +184,14 @@ declare namespace LocalJSX {
         "publishedAt": string;
         "publishedDateTime": string;
         "showCta": boolean;
-        "postUrl": string;
+        "contentUrl": string;
+    }
+    interface G33ContentListItemAttributes {
+        "displayDate": string;
+        "publishedDateTime": string;
+        "category": string;
+        "contentTitle": string;
+        "contentUrl": string;
     }
     interface G33HeroBannerAttributes {
         "titleText": string;
@@ -229,9 +205,9 @@ declare namespace LocalJSX {
 
     interface IntrinsicElements {
         "g33-alert": Omit<G33Alert, keyof G33AlertAttributes> & { [K in keyof G33Alert & keyof G33AlertAttributes]?: G33Alert[K] } & { [K in keyof G33Alert & keyof G33AlertAttributes as `attr:${K}`]?: G33AlertAttributes[K] } & { [K in keyof G33Alert & keyof G33AlertAttributes as `prop:${K}`]?: G33Alert[K] };
-        "g33-article-card": Omit<G33ArticleCard, keyof G33ArticleCardAttributes> & { [K in keyof G33ArticleCard & keyof G33ArticleCardAttributes]?: G33ArticleCard[K] } & { [K in keyof G33ArticleCard & keyof G33ArticleCardAttributes as `attr:${K}`]?: G33ArticleCardAttributes[K] } & { [K in keyof G33ArticleCard & keyof G33ArticleCardAttributes as `prop:${K}`]?: G33ArticleCard[K] } & OneOf<"postTitle", G33ArticleCard["postTitle"], G33ArticleCardAttributes["postTitle"]> & OneOf<"category", G33ArticleCard["category"], G33ArticleCardAttributes["category"]> & OneOf<"imageUrl", G33ArticleCard["imageUrl"], G33ArticleCardAttributes["imageUrl"]> & OneOf<"publishedAt", G33ArticleCard["publishedAt"], G33ArticleCardAttributes["publishedAt"]>;
         "g33-button": Omit<G33Button, keyof G33ButtonAttributes> & { [K in keyof G33Button & keyof G33ButtonAttributes]?: G33Button[K] } & { [K in keyof G33Button & keyof G33ButtonAttributes as `attr:${K}`]?: G33ButtonAttributes[K] } & { [K in keyof G33Button & keyof G33ButtonAttributes as `prop:${K}`]?: G33Button[K] };
-        "g33-content-card": Omit<G33ContentCard, keyof G33ContentCardAttributes> & { [K in keyof G33ContentCard & keyof G33ContentCardAttributes]?: G33ContentCard[K] } & { [K in keyof G33ContentCard & keyof G33ContentCardAttributes as `attr:${K}`]?: G33ContentCardAttributes[K] } & { [K in keyof G33ContentCard & keyof G33ContentCardAttributes as `prop:${K}`]?: G33ContentCard[K] } & OneOf<"postTitle", G33ContentCard["postTitle"], G33ContentCardAttributes["postTitle"]> & OneOf<"category", G33ContentCard["category"], G33ContentCardAttributes["category"]> & OneOf<"imageUrl", G33ContentCard["imageUrl"], G33ContentCardAttributes["imageUrl"]> & OneOf<"publishedAt", G33ContentCard["publishedAt"], G33ContentCardAttributes["publishedAt"]>;
+        "g33-content-card": Omit<G33ContentCard, keyof G33ContentCardAttributes> & { [K in keyof G33ContentCard & keyof G33ContentCardAttributes]?: G33ContentCard[K] } & { [K in keyof G33ContentCard & keyof G33ContentCardAttributes as `attr:${K}`]?: G33ContentCardAttributes[K] } & { [K in keyof G33ContentCard & keyof G33ContentCardAttributes as `prop:${K}`]?: G33ContentCard[K] } & OneOf<"contentTitle", G33ContentCard["contentTitle"], G33ContentCardAttributes["contentTitle"]> & OneOf<"category", G33ContentCard["category"], G33ContentCardAttributes["category"]> & OneOf<"imageUrl", G33ContentCard["imageUrl"], G33ContentCardAttributes["imageUrl"]> & OneOf<"publishedAt", G33ContentCard["publishedAt"], G33ContentCardAttributes["publishedAt"]>;
+        "g33-content-list-item": Omit<G33ContentListItem, keyof G33ContentListItemAttributes> & { [K in keyof G33ContentListItem & keyof G33ContentListItemAttributes]?: G33ContentListItem[K] } & { [K in keyof G33ContentListItem & keyof G33ContentListItemAttributes as `attr:${K}`]?: G33ContentListItemAttributes[K] } & { [K in keyof G33ContentListItem & keyof G33ContentListItemAttributes as `prop:${K}`]?: G33ContentListItem[K] };
         "g33-hero-banner": Omit<G33HeroBanner, keyof G33HeroBannerAttributes> & { [K in keyof G33HeroBanner & keyof G33HeroBannerAttributes]?: G33HeroBanner[K] } & { [K in keyof G33HeroBanner & keyof G33HeroBannerAttributes as `attr:${K}`]?: G33HeroBannerAttributes[K] } & { [K in keyof G33HeroBanner & keyof G33HeroBannerAttributes as `prop:${K}`]?: G33HeroBanner[K] } & OneOf<"titleText", G33HeroBanner["titleText"], G33HeroBannerAttributes["titleText"]>;
         "g33-showcase": G33Showcase;
     }
@@ -241,9 +217,9 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "g33-alert": LocalJSX.IntrinsicElements["g33-alert"] & JSXBase.HTMLAttributes<HTMLG33AlertElement>;
-            "g33-article-card": LocalJSX.IntrinsicElements["g33-article-card"] & JSXBase.HTMLAttributes<HTMLG33ArticleCardElement>;
             "g33-button": LocalJSX.IntrinsicElements["g33-button"] & JSXBase.HTMLAttributes<HTMLG33ButtonElement>;
             "g33-content-card": LocalJSX.IntrinsicElements["g33-content-card"] & JSXBase.HTMLAttributes<HTMLG33ContentCardElement>;
+            "g33-content-list-item": LocalJSX.IntrinsicElements["g33-content-list-item"] & JSXBase.HTMLAttributes<HTMLG33ContentListItemElement>;
             "g33-hero-banner": LocalJSX.IntrinsicElements["g33-hero-banner"] & JSXBase.HTMLAttributes<HTMLG33HeroBannerElement>;
             "g33-showcase": LocalJSX.IntrinsicElements["g33-showcase"] & JSXBase.HTMLAttributes<HTMLG33ShowcaseElement>;
         }

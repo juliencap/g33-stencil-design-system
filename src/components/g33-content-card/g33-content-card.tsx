@@ -6,7 +6,7 @@ import { Component, Prop, h } from '@stencil/core';
   shadow: true,
 })
 export class G33ContentCard {
-  @Prop() postTitle!: string;
+  @Prop() contentTitle!: string;
   @Prop() category!: string;
   @Prop() excerpt?: string;
   @Prop() imageUrl!: string;
@@ -14,37 +14,35 @@ export class G33ContentCard {
   @Prop() publishedAt!: string;
   @Prop() publishedDateTime?: string;
   @Prop() showCta: boolean = false;
-  @Prop() postUrl: string = '#';
+  @Prop() contentUrl: string = '#';
 
   render() {
     return (
       <article class="post actualite">
         <div class="featured-image">
-          <a href={this.postUrl}>
-            <img src={this.imageUrl} alt={this.postTitle} />
+          <a href={this.contentUrl}>
+            <img src={this.imageUrl} alt={this.contentTitle} />
           </a>
         </div>
 
         <div class="article-content">
-          <div class="above-entry-meta">
-            <span class="cat-links">{this.category}</span>
-            <span class="posted-on">
-              <time class="entry-date" dateTime={this.publishedDateTime}>
-                {this.publishedAt}
-              </time>
-            </span>
+          <div class="meta">
+            <span class="category">{this.category}</span>
+            <time class="entry-date" dateTime={this.publishedDateTime}>
+              {this.publishedAt}
+            </time>
           </div>
 
           <header class="entry-header">
             <h2 class="entry-title">
-              <a href={this.postUrl}>{this.postTitle}</a>
+              <a href={this.contentUrl}>{this.contentTitle}</a>
             </h2>
           </header>
 
           <div class="entry-content clearfix">
             {this.excerpt && <p>{this.excerpt}</p>}
             {this.showCta && (
-              <a href={this.postUrl} aria-label={`Lire la suite : ${this.postTitle}`} target="_blank" rel="noopener noreferrer">
+              <a href={this.contentUrl} aria-label={`Lire la suite : ${this.contentTitle}`} target="_blank" rel="noopener noreferrer">
                 <g33-button variant="secondary">Lire la suite</g33-button>
               </a>
             )}

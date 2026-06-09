@@ -4,7 +4,7 @@ export class G33Button {
     size = 'md';
     disabled = false;
     render() {
-        return (h("button", { key: '3eb297e3881c8672104ae672496db2bcbb41f16a', class: `button button--${this.variant} button--${this.size}`, disabled: this.disabled }, h("slot", { key: 'd2a1d748abf998770a960d6f0a419c0de8edc60c' })));
+        return (h("button", { key: '85fd2b7542cd3afcc865f9eb55d065e952f9877b', class: `button button--${this.variant} button--${this.size}`, disabled: this.disabled }, h("slot", { key: '55e71fcd08a8f65a075029f7d58a6de63ae11d89' })));
     }
     static get is() { return "g33-button"; }
     static get encapsulation() { return "shadow"; }

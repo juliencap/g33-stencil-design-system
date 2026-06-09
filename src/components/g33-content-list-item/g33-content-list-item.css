@@ -1,0 +1,30 @@
+:host {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.meta {
+  font-size: var(--g33-font-size-sm);
+  color: var(--g33-color-text-light);
+  margin-bottom: var(--g33-spacing-sm);
+}
+
+.entry-date {
+  color: var(--g33-color-text-light);
+}
+
+.title {
+  font-size: var(--g33-font-size-md);
+  font-weight: var(--g33-font-weight-regular);
+  line-height: var(--g33-line-height-default);
+}
+
+.category::before {
+  content: '•';
+  margin-left: var(--g33-spacing-xs);
+  margin-right: var(--g33-spacing-xs);
+}

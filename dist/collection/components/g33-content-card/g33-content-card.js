@@ -1,6 +1,6 @@
 import { h } from "@stencil/core";
 export class G33ContentCard {
-    postTitle;
+    contentTitle;
     category;
     excerpt;
     imageUrl;
@@ -8,9 +8,9 @@ export class G33ContentCard {
     publishedAt;
     publishedDateTime;
     showCta = false;
-    postUrl = '#';
+    contentUrl = '#';
     render() {
-        return (h("article", { key: '95eb9f75c077386781477bc759f65bff0cc23472', class: "post actualite" }, h("div", { key: '32ed51d409a393bb675d835bc4a0d6ee41a8c96a', class: "featured-image" }, h("a", { key: 'b356fd9e05a10089096c382d6aa92c54fc43bee0', href: this.postUrl }, h("img", { key: '16e23119968c663765734650696297d079ff6e33', src: this.imageUrl, alt: this.postTitle }))), h("div", { key: '1b6955c8e41ee8d9379a4a6175cbbf0958231a42', class: "article-content" }, h("div", { key: 'f68fc37115ebd812c96fe426753253c62e8578e9', class: "above-entry-meta" }, h("span", { key: '26412503a7c9f01447eb34233c8b4229f17fe327', class: "cat-links" }, this.category), h("span", { key: '31348cce118179300a01cd0158cb460dc580fa66', class: "posted-on" }, h("time", { key: 'a87585a08fa5d61c8d5ae9eaf30adb2c39cf95a2', class: "entry-date", dateTime: this.publishedDateTime }, this.publishedAt))), h("header", { key: 'f889dbb157a828f93211cee85d746cafea2337eb', class: "entry-header" }, h("h2", { key: '36656753d43c451ecaca17614086a768fc69ca4c', class: "entry-title" }, h("a", { key: '558c26e38c213912735c73910628e0b3f4090f6a', href: this.postUrl }, this.postTitle))), h("div", { key: 'eb527f932b1e97772f50282630bd726bbd34390e', class: "entry-content clearfix" }, this.excerpt && h("p", { key: 'bf3a593693000185caf356f711a02f52f0db9b02' }, this.excerpt), this.showCta && (h("a", { key: '07d6465fbad0779b83df036ea60a4c8200826b99', href: this.postUrl, "aria-label": `Lire la suite : ${this.postTitle}`, target: "_blank", rel: "noopener noreferrer" }, h("g33-button", { key: 'd45332c6fc6bbb8a9ec755bc7fff6ecf3d20a1a8', variant: "secondary" }, "Lire la suite")))))));
+        return (h("article", { key: '8c8b078bb195790dfa7b6b25f779e764bd159e78', class: "post actualite" }, h("div", { key: 'd64d7e9606a2e6ba9153b487a0731eab0a8d9846', class: "featured-image" }, h("a", { key: 'cc099274d847dea82a861bcd27613c514e5d71ba', href: this.contentUrl }, h("img", { key: 'f5c3cd5b6317c4af4560598c53a93e9efe47093c', src: this.imageUrl, alt: this.contentTitle }))), h("div", { key: '739192c68b340f9655ca67334ace77de8953d963', class: "article-content" }, h("div", { key: 'b0613753cfeb8b1504b591f6d423068ea4d257f9', class: "meta" }, h("span", { key: 'b0012ab004a07af80688f77e6c6ab4e5a1acb2b0', class: "category" }, this.category), h("time", { key: '311874ab6cad892e5cd3ab624f79ff3ab99e9b80', class: "entry-date", dateTime: this.publishedDateTime }, this.publishedAt)), h("header", { key: '328541b7f2cf4a60fbda33aacf5f735948b577ac', class: "entry-header" }, h("h2", { key: '5a0779ec309b778c894f8e2329e1eec7786f1d44', class: "entry-title" }, h("a", { key: '7ff3ed5741ce3045a72cbad2fef61fc33e8a27a5', href: this.contentUrl }, this.contentTitle))), h("div", { key: 'b016a3066d09c9987841526ea89f4a6ddd3ea91b', class: "entry-content clearfix" }, this.excerpt && h("p", { key: 'f107da5499b1116447888d0c626a9e0af22c61b7' }, this.excerpt), this.showCta && (h("a", { key: '840ae7932a57df5d97c42d4b41e07c6a260daa84', href: this.contentUrl, "aria-label": `Lire la suite : ${this.contentTitle}`, target: "_blank", rel: "noopener noreferrer" }, h("g33-button", { key: '511d98c425592ed733f62ccc26001cbed3673121', variant: "secondary" }, "Lire la suite")))))));
     }
     static get is() { return "g33-content-card"; }
     static get encapsulation() { return "shadow"; }
@@ -26,7 +26,7 @@ export class G33ContentCard {
     }
     static get properties() {
         return {
-            "postTitle": {
+            "contentTitle": {
                 "type": "string",
                 "mutable": false,
                 "complexType": {
@@ -43,7 +43,7 @@ export class G33ContentCard {
                 "getter": false,
                 "setter": false,
                 "reflect": false,
-                "attribute": "post-title"
+                "attribute": "content-title"
             },
             "category": {
                 "type": "string",
@@ -179,7 +179,7 @@ export class G33ContentCard {
                 "attribute": "show-cta",
                 "defaultValue": "false"
             },
-            "postUrl": {
+            "contentUrl": {
                 "type": "string",
                 "mutable": false,
                 "complexType": {
@@ -196,7 +196,7 @@ export class G33ContentCard {
                 "getter": false,
                 "setter": false,
                 "reflect": false,
-                "attribute": "post-url",
+                "attribute": "content-url",
                 "defaultValue": "'#'"
             }
         };
