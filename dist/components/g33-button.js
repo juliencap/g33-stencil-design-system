@@ -1,1 +1,0 @@
-import{G as o,d as s}from"./p-ZxgcTexx.js";const x=o,p=s;export{x as G33Button,p as defineCustomElement}
