@@ -22,10 +22,6 @@
 
 ## Dependencies
 
-### Used by
-
- - [g33-showcase](../g33-showcase)
-
 ### Depends on
 
 - [g33-button](../g33-button)
@@ -33,9 +29,8 @@
 ### Graph
 ```mermaid
 graph TD;
-  g33-article-card --> g33-button
-  g33-showcase --> g33-article-card
-  style g33-article-card fill:#f9f,stroke:#333,stroke-width:4px
+  g33-content-card --> g33-button
+  style g33-content-card fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------
