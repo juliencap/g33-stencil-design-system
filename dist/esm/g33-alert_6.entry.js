@@ -28,7 +28,7 @@ const G33Button = class {
 };
 G33Button.style = g33ButtonCss();
 
-const g33ContentCardCss = () => `:host{display:block;font-family:var(--g33-font-family)}.post{max-width:720px}.featured-image img{width:100%;display:block}.meta{color:var(--g33-color-text-light);margin-top:var(--g33-spacing-md);margin-bottom:var(--g33-spacing-sm)}.category::after{content:'•';margin-left:var(--g33-spacing-xs);margin-right:var(--g33-spacing-xs)}.entry-date{color:var(--g33-color-text-light)}.entry-header{margin-bottom:var(--g33-spacing-sm)}.entry-title{margin-bottom:0;font-weight:var(--g33-font-weight-bold);line-height:1.2}.entry-title a{color:var(--g33-color-secondary);text-decoration:none}.entry-content{line-height:var(--g33-line-height-default);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.entry-content p{margin-top:inherit}.button:focus-visible{outline:2px solid var(--g33-color-info);outline-offset:2px}`;
+const g33ContentCardCss = () => `:host{display:block;font-family:var(--g33-font-family)}.post{max-width:720px}.featured-image img{width:100%;display:block}.meta{color:var(--g33-color-text-light);margin-top:var(--g33-spacing-md);margin-bottom:var(--g33-spacing-sm)}.category::after{content:'•';margin-left:var(--g33-spacing-xs);margin-right:var(--g33-spacing-xs)}.entry-date{color:var(--g33-color-text-light)}.entry-header{margin-bottom:var(--g33-spacing-sm)}.entry-title{margin-bottom:0;font-weight:var(--g33-font-weight-bold);line-height:1.2}.entry-title a{color:inherit;text-decoration:none}.entry-content{line-height:var(--g33-line-height-default);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.entry-content p{margin-top:inherit}.button:focus-visible{outline:2px solid var(--g33-color-info);outline-offset:2px}`;
 
 const G33ContentCard = class {
     constructor(hostRef) {
@@ -49,7 +49,7 @@ const G33ContentCard = class {
 };
 G33ContentCard.style = g33ContentCardCss();
 
-const g33ContentListItemCss = () => `:host{display:block}a{text-decoration:none;color:inherit}.meta{font-size:var(--g33-font-size-sm);color:var(--g33-color-text-light);margin-bottom:var(--g33-spacing-sm)}.entry-date{color:var(--g33-color-text-light)}.title{font-size:var(--g33-font-size-md);font-weight:var(--g33-font-weight-regular);line-height:var(--g33-line-height-default)}.category::before{content:'•';margin-left:var(--g33-spacing-xs);margin-right:var(--g33-spacing-xs)}`;
+const g33ContentListItemCss = () => `:host{display:block}a{text-decoration:none;color:inherit}.meta{font-size:var(--g33-font-size-sm);color:var(--g33-color-text-light);margin-bottom:var(--g33-spacing-sm)}.entry-date{color:var(--g33-color-text-light)}.title{font-size:var(--g33-font-size-md);font-weight:var(--g33-font-weight-regular);line-height:var(--g33-line-height-default);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.category::before{content:'•';margin-left:var(--g33-spacing-xs);margin-right:var(--g33-spacing-xs)}`;
 
 const G33ContentListItem = class {
     constructor(hostRef) {

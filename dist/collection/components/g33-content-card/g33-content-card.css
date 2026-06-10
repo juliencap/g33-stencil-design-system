@@ -39,7 +39,7 @@
 }
 
 .entry-title a {
-  color: var(--g33-color-secondary);
+  color: inherit;
   text-decoration: none;
 }
 

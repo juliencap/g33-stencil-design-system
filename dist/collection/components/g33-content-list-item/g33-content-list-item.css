@@ -21,6 +21,10 @@ a {
   font-size: var(--g33-font-size-md);
   font-weight: var(--g33-font-weight-regular);
   line-height: var(--g33-line-height-default);
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .category::before {
