@@ -40,9 +40,10 @@ export class G33ContentCard {
           </header>
 
           <div class="entry-content clearfix">
-            {this.excerpt && <p>{this.excerpt}</p>}
+            {this.excerpt && <p class="entry-excerpt">{this.excerpt}</p>}
+
             {this.showCta && (
-              <a href={this.contentUrl} aria-label={`Lire la suite : ${this.contentTitle}`} target="_blank" rel="noopener noreferrer">
+              <a class="entry-cta" href={this.contentUrl} aria-label={`Lire la suite : ${this.contentTitle}`} target="_blank" rel="noopener noreferrer">
                 <g33-button variant="secondary">Lire la suite</g33-button>
               </a>
             )}

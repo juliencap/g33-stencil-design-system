@@ -45,14 +45,20 @@
 
 .entry-content {
   line-height: var(--g33-line-height-default);
+}
+
+.entry-excerpt {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  margin: 0;
 }
 
-.entry-content p {
-  margin-top: inherit;
+.entry-cta {
+  display: inline-block;
+  margin-top: var(--g33-spacing-md);
+  text-decoration: none;
 }
 
 .button:focus-visible {
