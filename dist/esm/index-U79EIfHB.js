@@ -1,11 +1,9 @@
-'use strict';
-
 const NAMESPACE = 'girondins33-design-system';
 const BUILD = /* girondins33-design-system */ { hotModuleReplacement: false, hydratedSelectorName: "hydrated", lazyLoad: true, propChangeCallback: false, state: true, updatable: true};
 const Env = /* girondins33-design-system */ {"STORYBLOK_TOKEN":"MiVtrDIHoqpQ5Lt2Qm79mgtt"};
 
 const globalScripts = () => {};
-const globalStyles = ":host,:root{--g33-color-primary:#123c7c;--g33-color-primary-hover:#0f3368;--g33-color-secondary:#bd0000;--g33-color-text:#444444;--g33-color-text-light:#777777;--g33-color-white:#ffffff;--g33-color-border:#e5e5e5;--g33-color-success:#2e7d32;--g33-color-warning:#ed6c02;--g33-color-error:#d32f2f;--g33-color-info:#0288d1;--g33-font-family:'Open Sans', sans-serif;--g33-font-size-xs:0.75rem;--g33-font-size-sm:0.875rem;--g33-font-size-md:1rem;--g33-font-size-lg:1.5rem;--g33-font-size-xl:2rem;--g33-font-weight-regular:400;--g33-font-weight-semibold:600;--g33-font-weight-bold:700;--g33-font-weight-black:900;--g33-line-height-default:1.6;--g33-spacing-xs:0.25rem;--g33-spacing-sm:0.5rem;--g33-spacing-md:1rem;--g33-spacing-lg:1.5rem;--g33-spacing-xl:2rem;--g33-border-width:1px;--g33-radius-sm:0.25rem;--g33-radius-md:0.5rem;--g33-radius-lg:0.75rem;--g33-shadow-sm:0 2px 4px rgba(0, 0, 0, 0.08);--g33-shadow-md:0 4px 8px rgba(0, 0, 0, 0.12)}";
+const globalStyles = ":host,:root{--g33-color-primary:#123c7c;--g33-color-primary-hover:#0f3368;--g33-color-secondary:#bd0000;--g33-color-text:#1d1d1d;--g33-color-text-light:#777777;--g33-color-white:#ffffff;--g33-color-border:#e5e5e5;--g33-color-success:#2e7d32;--g33-color-warning:#ed6c02;--g33-color-error:#d32f2f;--g33-color-info:#0288d1;--g33-font-family:'Open Sans', sans-serif;--g33-font-size-xs:0.75rem;--g33-font-size-sm:0.875rem;--g33-font-size-md:1rem;--g33-font-size-lg:1.5rem;--g33-font-size-xl:2rem;--g33-font-weight-regular:400;--g33-font-weight-semibold:600;--g33-font-weight-bold:700;--g33-font-weight-black:900;--g33-line-height-default:1.6;--g33-spacing-xs:0.25rem;--g33-spacing-sm:0.5rem;--g33-spacing-md:1rem;--g33-spacing-lg:1.5rem;--g33-spacing-xl:2rem;--g33-border-width:1px;--g33-radius-sm:0.25rem;--g33-radius-md:0.5rem;--g33-radius-lg:0.75rem;--g33-shadow-sm:0 2px 4px rgba(0, 0, 0, 0.08);--g33-shadow-md:0 4px 8px rgba(0, 0, 0, 0.12)}";
 
 /*
  Stencil Client Platform v4.43.5 | MIT Licensed | https://stenciljs.com
@@ -1434,10 +1432,4 @@ function transformTag(tag) {
   return tag;
 }
 
-exports.Env = Env;
-exports.bootstrapLazy = bootstrapLazy;
-exports.globalScripts = globalScripts;
-exports.h = h;
-exports.promiseResolve = promiseResolve;
-exports.registerInstance = registerInstance;
-exports.setNonce = setNonce;
+export { Env as E, bootstrapLazy as b, globalScripts as g, h, promiseResolve as p, registerInstance as r, setNonce as s };

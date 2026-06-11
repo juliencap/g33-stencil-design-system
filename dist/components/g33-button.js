@@ -1,1 +1,1 @@
-import{G as o,d as p}from"./p-CSpr-1jz.js";const r=o,s=p;export{r as G33Button,s as defineCustomElement}
+import{G as o,d as s}from"./p-BBINRhla.js";const a=o,p=s;export{a as G33Button,p as defineCustomElement}

@@ -1,1 +1,1 @@
-import{G as s,d as o}from"./p-slPb4Tm4.js";const m=s,p=o;export{m as G33ContentCard,p as defineCustomElement}
+import{G as o,d as r}from"./p-CdedJMRr.js";const s=o,d=r;export{s as G33ContentCard,d as defineCustomElement}

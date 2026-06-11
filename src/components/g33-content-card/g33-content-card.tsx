@@ -27,7 +27,7 @@ export class G33ContentCard {
 
         <div class="article-content">
           <div class="meta">
-            <span class="category">{this.category}</span>
+            {this.category && <span class="category">{this.category}</span>}
             <time class="entry-date" dateTime={this.publishedDateTime}>
               {this.publishedAt}
             </time>
