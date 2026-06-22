@@ -55,7 +55,7 @@ export class G33Showcase {
             contentTitle="Christophe Dugarry : « On a un président, un actionnaire, qui est transparent. Il n’y a rien d’humain dans ce club. »"
             category="Médias"
             excerpt="Dans l’émission Rothen s’enflamme (RMC), Christophe Dugarry a donné son avis sur le sujet Cannes, Bordeaux, les clubs historiques sont-ils..."
-            imageUrl="https://www.girondins33.com/storage/2024/02/logo-girondins-bordeaux-sc-1-800x445.webp"
+            imageUrl="https://admin.girondins33.com/storage/2024/02/logo-girondins-bordeaux-sc-1-800x445.webp"
             author="Julien"
             publishedAt="27 février 2025"
             publishedDateTime="2025-02-27"
