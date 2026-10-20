@@ -126,6 +126,12 @@ A React application demonstrating the integration of the Design System component
 
 🌐 [Live Demo](https://g33-react-consumer.vercel.app/)
 
+## Angular Consumer Application
+
+An Angular application demonstrating the integration of the Design System components with Storyblok and the WordPress REST API.
+
+🔗 [Repository](https://github.com/juliencap/g33-angular-consumer)
+
 ## Installation
 
 ```bash
