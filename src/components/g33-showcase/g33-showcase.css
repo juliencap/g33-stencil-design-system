@@ -20,3 +20,14 @@ section {
 g33-button {
   margin-right: 12px;
 }
+
+.intro {
+  margin: 0;
+  max-width: 70ch;
+  color: var(--g33-color-text-light);
+}
+
+.intro a {
+  color: var(--g33-color-primary);
+  font-weight: var(--g33-font-weight-semibold);
+}

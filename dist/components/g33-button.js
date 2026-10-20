@@ -1,1 +1,0 @@
-import{G as o,d as s}from"./p-BBINRhla.js";const a=o,p=s;export{a as G33Button,p as defineCustomElement}

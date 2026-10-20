@@ -1,1 +1,0 @@
-import{G as o,d as r}from"./p-CdedJMRr.js";const s=o,d=r;export{s as G33ContentCard,d as defineCustomElement}

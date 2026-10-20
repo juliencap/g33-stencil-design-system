@@ -21,6 +21,18 @@ export class G33Showcase {
       <main>
         <h1>G33 Design System</h1>
 
+        <p class="intro">
+          Web Components library built with Stencil, consumed without framework-specific code by a{' '}
+          <a href="https://g33-react-consumer.vercel.app/" target="_blank" rel="noopener noreferrer">
+            React app
+          </a>{' '}
+          and an{' '}
+          <a href="https://g33-angular-consumer.vercel.app/" target="_blank" rel="noopener noreferrer">
+            Angular app
+          </a>
+          .
+        </p>
+
         <section>
           <h2>Buttons</h2>
 
